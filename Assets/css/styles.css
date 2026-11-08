@@ -1007,6 +1007,9 @@ button:focus-visible {
     left: 0;
     right: 0;
     display: none;
+    max-height: calc(100svh - 68px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
     flex-direction: column;
     align-items: stretch;
     gap: 0;
@@ -1028,13 +1031,31 @@ button:focus-visible {
   .hero {
     min-height: auto;
     grid-template-columns: 1fr;
-    gap: 45px;
-    padding-top: 135px;
-    padding-bottom: 75px;
+    gap: 38px;
+    padding-top: 112px;
+    padding-bottom: 68px;
+  }
+
+  .eyebrow {
+    margin-bottom: 24px;
   }
 
   .hero h1 {
-    font-size: clamp(3.5rem, 13vw, 3rem);
+    font-size: clamp(3rem, 12vw, 4.5rem);
+  }
+
+  .hero-role {
+    font-size: clamp(.68rem, 2.8vw, .84rem);
+    line-height: 1.8;
+  }
+
+  .hero-description {
+    font-size: .78rem;
+    line-height: 1.9;
+  }
+
+  .hero-links a {
+    color: #918b84;
   }
 
   .hero-visual {
@@ -1043,13 +1064,13 @@ button:focus-visible {
   }
 
   .orbit-one {
-    width: 360px;
-    height: 360px;
+    width: min(90vw, 360px);
+    height: min(90vw, 360px);
   }
 
   .orbit-two {
-    width: 430px;
-    height: 430px;
+    width: min(108vw, 430px);
+    height: min(108vw, 430px);
   }
 
   .facts-grid {
@@ -1127,13 +1148,15 @@ button:focus-visible {
     width: calc(100% - 32px);
   }
 
-  .hero h1 {
-    font-size: 2.5rem;
-  }
-
   .hero-actions {
     align-items: stretch;
     flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero-links {
+    gap: 18px;
+    margin-top: 30px;
   }
 
   .button {
@@ -1141,8 +1164,13 @@ button:focus-visible {
   }
 
   .code-content {
-    padding: 22px 14px;
-    font-size: .58rem;
+    padding: 20px 12px;
+    font-size: clamp(.54rem, 2.5vw, .62rem);
+    line-height: 2.25;
+  }
+
+  .code-content .indent {
+    padding-left: 14px;
   }
 
   .project-content {
