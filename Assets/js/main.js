@@ -107,13 +107,13 @@ function setLanguage(language) {
   while ((textNode = walker.nextNode())) {
     if (!textNodeOriginals.has(textNode)) textNodeOriginals.set(textNode, textNode.nodeValue || "");
     const original = textNodeOriginals.get(textNode);
-    const normalized = original.trim().replace(/\\s+/g, " ");
+    const normalized = original.trim().replace(/\s+/g, " ");
     if (!normalized) continue;
     const translated = Object.prototype.hasOwnProperty.call(dictionary, normalized)
       ? dictionary[normalized]
       : normalized;
-    const leading = original.match(/^\\s*/)?.[0] || "";
-    const trailing = original.match(/\\s*$/)?.[0] || "";
+    const leading = original.match(/^\s*/)?.[0] || "";
+    const trailing = original.match(/\s*$/)?.[0] || "";
     textNode.nodeValue = leading + translated + trailing;
   }
 
