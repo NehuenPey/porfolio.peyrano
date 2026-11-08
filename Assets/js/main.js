@@ -101,21 +101,21 @@ function setLanguage(language) {
   const selected = languageTranslations[language] ? language : "es";
   const dictionary = languageTranslations[selected];
 
-  document.querySelectorAll("body *").forEach((element) => {
-    if (element.children.length !== 0) return;
-    if (!element.hasAttribute("data-i18n-original")) {
-      element.setAttribute("data-i18n-original", element.textContent);
-    }
-    const original = element.getAttribute("data-i18n-original") || "";
+  const textNodeOriginals = setLanguage.textNodeOriginals || (setLanguage.textNodeOriginals = new WeakMap());
+  const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+  let textNode;
+  while ((textNode = walker.nextNode())) {
+    if (!textNodeOriginals.has(textNode)) textNodeOriginals.set(textNode, textNode.nodeValue || "");
+    const original = textNodeOriginals.get(textNode);
     const normalized = original.trim().replace(/\\s+/g, " ");
-    if (!normalized) return;
+    if (!normalized) continue;
     const translated = Object.prototype.hasOwnProperty.call(dictionary, normalized)
       ? dictionary[normalized]
       : normalized;
     const leading = original.match(/^\\s*/)?.[0] || "";
     const trailing = original.match(/\\s*$/)?.[0] || "";
-    element.textContent = leading + translated + trailing;
-  });
+    textNode.nodeValue = leading + translated + trailing;
+  }
 
   const meta = languageMeta[selected];
   document.documentElement.lang = selected;
