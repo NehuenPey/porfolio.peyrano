@@ -7,20 +7,26 @@ if (currentYear) currentYear.textContent = new Date().getFullYear();
 
 function updateScrollProgress() {
   if (!progressBar) return;
-  const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
-  const progress = scrollableHeight > 0 ? (window.scrollY / scrollableHeight) * 100 : 0;
+  const scrollableHeight =
+    document.documentElement.scrollHeight - window.innerHeight;
+  const progress =
+    scrollableHeight > 0 ? (window.scrollY / scrollableHeight) * 100 : 0;
   progressBar.style.width = `${Math.min(progress, 100)}%`;
 }
 
 let scrollTicking = false;
-window.addEventListener("scroll", () => {
-  if (scrollTicking) return;
-  scrollTicking = true;
-  window.requestAnimationFrame(() => {
-    updateScrollProgress();
-    scrollTicking = false;
-  });
-}, { passive: true });
+window.addEventListener(
+  "scroll",
+  () => {
+    if (scrollTicking) return;
+    scrollTicking = true;
+    window.requestAnimationFrame(() => {
+      updateScrollProgress();
+      scrollTicking = false;
+    });
+  },
+  { passive: true },
+);
 updateScrollProgress();
 
 function closeMenu() {
@@ -34,7 +40,10 @@ if (navToggle && navMenu) {
   navToggle.addEventListener("click", () => {
     const isExpanded = navToggle.getAttribute("aria-expanded") === "true";
     navToggle.setAttribute("aria-expanded", String(!isExpanded));
-    navToggle.setAttribute("aria-label", isExpanded ? "Abrir menú" : "Cerrar menú");
+    navToggle.setAttribute(
+      "aria-label",
+      isExpanded ? "Abrir menú" : "Cerrar menú",
+    );
     navMenu.classList.toggle("is-open", !isExpanded);
   });
 
@@ -47,7 +56,8 @@ if (navToggle && navMenu) {
   });
 
   document.addEventListener("click", (event) => {
-    if (!navMenu.contains(event.target) && !navToggle.contains(event.target)) closeMenu();
+    if (!navMenu.contains(event.target) && !navToggle.contains(event.target))
+      closeMenu();
   });
 
   window.addEventListener("resize", () => {
@@ -55,15 +65,20 @@ if (navToggle && navMenu) {
   });
 }
 
-const revealItems = document.querySelectorAll(".skill-card, .project-card, .secondary-card, .about-summary, .about-details");
+const revealItems = document.querySelectorAll(
+  ".skill-card, .project-card, .secondary-card, .about-summary, .about-details",
+);
 if ("IntersectionObserver" in window) {
-  const revealObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) return;
-      entry.target.classList.add("is-visible");
-      observer.unobserve(entry.target);
-    });
-  }, { threshold: 0.12 });
+  const revealObserver = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      });
+    },
+    { threshold: 0.12 },
+  );
 
   revealItems.forEach((item) => {
     item.classList.add("reveal-item");
