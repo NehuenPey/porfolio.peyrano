@@ -203,7 +203,7 @@ button:focus-visible {
 
 .hero h1 {
   font-family: var(--font-display);
-  font-size: clamp(3.8rem, 6.5vw, 5rem);
+  font-size: clamp(3.8rem, 6.5vw, 4rem);
   line-height: .91;
   font-weight: 800;
   letter-spacing: -.085em;
@@ -1032,7 +1032,7 @@ button:focus-visible {
   }
 
   .hero h1 {
-    font-size: clamp(3.5rem, 13vw, 4rem);
+    font-size: clamp(3.5rem, 13vw, 3rem);
   }
 
   .hero-visual {
@@ -1126,7 +1126,7 @@ button:focus-visible {
   }
 
   .hero h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 
   .hero-actions {
