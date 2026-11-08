@@ -1,48 +1,48 @@
 # Nehuén Peyrano — Portfolio
 
-🔗 **Live Site:**
-[https://nehuenpeyranodev.vercel.app/](https://nehuenpeyranodev.vercel.app/)
+Portfolio personal desarrollado para presentar mi perfil profesional, stack tecnológico y proyectos de software.
 
----
+**Sitio web:** https://nehuenpeyranodev.vercel.app/
 
-## 📌 Sobre el Proyecto
+## Contenido
 
-Este portfolio fue desarrollado como presentación profesional para mostrar:
+- Presentación y perfil profesional.
+- Tecnologías y herramientas de desarrollo.
+- Proyectos destacados y repositorios.
+- Formación académica e idiomas.
+- Enlaces de contacto y currículum.
 
-* Stack tecnológico
-* Proyectos destacados
-* Información personal
-* Experiencia y enfoque de trabajo
+## Tecnologías
 
-El objetivo es mantener una estética minimalista, moderna y con buena performance.
+- HTML5
+- CSS3
+- JavaScript
+- Google Fonts
 
----
+## Estructura
 
-## 🛠️ Tecnologías Utilizadas
+```
+.
+├── Assets/
+│   ├── css/
+│   │   └── styles.css
+│   ├── img/
+│   └── pdf/
+│       └── PeyranoNehuén_CV.pdf
+├── index.html
+└── README.md
+```
 
-* HTML5
-* CSS3
-* JavaScript
-* Deploy en Vercel
+## Desarrollo local
 
-## 🚀 Deploy
+No requiere instalación de dependencias. Se puede abrir `index.html` directamente en el navegador o ejecutar un servidor local estático, por ejemplo con la extensión Live Server de Visual Studio Code.
 
-El proyecto está desplegado en **Vercel** con integración continua desde GitHub.
+## Publicación
 
-Cada push a la rama principal genera automáticamente un nuevo deploy.
+El sitio se encuentra publicado en Vercel. Si el proyecto está vinculado al repositorio, los cambios integrados en la rama configurada para producción pueden generar una nueva publicación automática.
 
-## 🎯 Objetivo Profesional
+## Contacto
 
-Desarrollador Full Stack enfocado en crear aplicaciones modernas, escalables y bien estructuradas.
-Interesado en buenas prácticas, arquitectura limpia y mejora continua.
-
-## 📬 Contacto
-
-* Web: https://nehuenpeyranodev.vercel.app/
-* LinkedIn: (https://www.linkedin.com/in/nehuenpeyrano/)
-* Email: nehuenpeyrano@gmail.com
-
-
-📄 Licencia
-
-Este proyecto es de uso personal y representa mi portfolio profesional.
+- **LinkedIn:** https://www.linkedin.com/in/nehuenpeyrano/
+- **GitHub:** https://github.com/NehuenPey
+- **Email:** nehuenpeyrano@gmail.com
