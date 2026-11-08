@@ -1,470 +1,248 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Desarrollador de Software Full Stack con experiencia en proyectos web, APIs REST y sistemas de gestión.">
-  <meta property="og:title" content="Nehuén Peyrano - Software Developer">
-  <meta property="og:description" content="Portfolio profesional de desarrollo web.">
-  <title>Nehuén Peyrano · Desarrollador de Software</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfolio de Nehuén Peyrano, desarrollador de software enfocado en aplicaciones web, APIs REST y soluciones full stack con C#, ASP.NET Core, Node.js y Angular.">
+  <meta name="author" content="Nehuén Peyrano">
+  <meta name="theme-color" content="#171717">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_AR">
+  <meta property="og:title" content="Nehuén Peyrano | Desarrollador de Software">
+  <meta property="og:description" content="Proyectos, stack tecnológico y perfil profesional de Nehuén Peyrano.">
+  <meta property="og:url" content="https://nehuenpeyranodev.vercel.app/">
+  <link rel="canonical" href="https://nehuenpeyranodev.vercel.app/">
+  <title>Nehuén Peyrano | Desarrollador de Software</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="Assets/css/styles.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="Assets/img/Icono.png">
+  <link rel="stylesheet" href="Assets/css/styles.css">
 </head>
-
 <body>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
-  <div class="cursor" id="cursor"></div>
-  <div class="cursor-ring" id="cursorRing"></div>
-  <div class="scroll-line" id="scrollLine"></div>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Navegación principal">
+      <a class="brand" href="#home" aria-label="Nehuén Peyrano, inicio"><span>NP</span>_DEV</a>
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="navMenu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#skills">Stack</a></li>
+        <li><a href="#projects">Proyectos</a></li>
+        <li><a href="#about">Sobre mí</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
+      <a class="nav-cta" href="Assets/pdf/PeyranoNehuén_CV.pdf" target="_blank" rel="noopener noreferrer">Ver CV <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
 
-  <!-- NAV -->
-  <nav>
-    <a href="index.html" class="logo">
-      <div class="logo"><span>NP</span>_DEV</div>
-    </a>
-
-    <ul class="nav-links">
-      <li><a href="#skills">Stack</a></li>
-      <li><a href="#projects">Proyectos</a></li>
-      <li><a href="#about">Sobre mí</a></li>
-      <li><a href="#contact">Contacto</a></li>
-    </ul>
-
-  </nav>
-
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-left">
-      <div class="hero-badge">Desarrollador de Software</div>
-      <h1 class="hero-name">Nehuén<br><span class="accent">Peyrano</span></h1>
-      <p class="hero-role"><strong>C# · ASP.NET Core · Node.js · JavaScript · Angular</strong></p>
-      <p class="hero-desc">Desarrollo aplicaciones web y APIs REST orientadas a resolver necesidades concretas. Trabajo con tecnologías de frontend y backend, integración de bases de datos y sistemas de gestión. Me interesa construir soluciones mantenibles y colaborar en equipos de desarrollo.</p>
-    </div>
-    <div class="hero-right">
-      <div class="terminal">
-        <div class="terminal-bar">
-          <div class="t-dot"></div>
-          <div class="t-dot"></div>
-          <div class="t-dot"></div>
-          <span class="t-filename">~/nehuen · zsh</span>
+  <main id="main">
+    <section class="hero container" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> Desarrollador de Software · Rosario, Argentina</p>
+        <h1>Nehuén<br><span class="accent">Peyrano.</span></h1>
+        <p class="hero-role">Full Stack Developer <span aria-hidden="true">/</span> Backend & APIs</p>
+        <p class="hero-description">Desarrollo aplicaciones web y APIs REST con foco en la lógica de negocio, la integración de bases de datos y la construcción de soluciones mantenibles. Trabajo principalmente con C# y ASP.NET Core, además de JavaScript, Node.js y Angular.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#projects">Ver proyectos <span aria-hidden="true">↘</span></a>
+          <a class="button button-secondary" href="Assets/pdf/PeyranoNehuén_CV.pdf" target="_blank" rel="noopener noreferrer">Consultar CV <span aria-hidden="true">↗</span></a>
         </div>
-        <div class="terminal-body">
-          <div class="t-line"><span class="t-muted">$</span> <span class="t-orange">whoami</span></div>
-          <div class="t-line t-white">nehuen_peyrano · software_dev</div>
-          <div class="t-line">&nbsp;</div>
-          <div class="t-line"><span class="t-muted">$</span> <span class="t-orange">cat</span> <span
-              class="t-blue">stack.json</span></div>
-          <div class="t-line"><span class="t-muted">{</span></div>
-          <div class="t-line">&nbsp;&nbsp;<span class="t-orange">"frontend"</span><span class="t-muted">:</span> <span
-              class="t-yellow">["TypeScript", "HTML/CSS", "JS", "C#", "PHP"]</span><span class="t-muted">,</span></div>
-          <div class="t-line">&nbsp;&nbsp;<span class="t-orange">"backend"</span><span class="t-muted">:</span> <span
-              class="t-yellow">["ASP.NET Core", "Node.js"]</span><span class="t-muted">,</span></div>
-          <div class="t-line">&nbsp;&nbsp;<span class="t-orange">"database"</span><span class="t-muted">:</span> <span
-              class="t-yellow">["SQL","MySQL","SQL Serve", "MongoDB"]</span><span class="t-muted">,</span></div>
-          <div class="t-line">&nbsp;&nbsp;<span class="t-orange">"frameworks"</span><span class="t-muted">:</span> <span
-              class="t-yellow">["Angular", "Express.JS"]</span><span class="t-muted">,</span></div>
-          <div class="t-line">&nbsp;&nbsp;<span class="t-orange">"tools"</span><span class="t-muted">:</span> <span
-              class="t-yellow">["Git/Github","SCRUM", "Jira", "UML", "Swagger / OpenAPI"]</span></div>
-          <div class="t-line"><span class="t-muted">}</span></div>
-          <div class="t-line">&nbsp;</div>
-          <div class="t-line"><span class="t-muted">$</span> <span class="t-orange">npm run dev</span></div>
-          <div class="t-line"><span class="t-green">✓</span> <span class="t-white">Servidor iniciado correctamente.</span></div>
-          <div class="t-line"><span class="t-green">✓</span> <span class="t-white">API lista para responder</span> <span
-              class="t-cursor"></span></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- STATS -->
-  <div class="stats">
-    <div class="stat-item reveal">
-      <div class="stat-num">10</div>
-      <div class="stat-label">Proyectos</div>
-    </div>
-    <div class="stat-item reveal">
-      <div class="stat-num">2</div>
-      <div class="stat-label">Proyectos en desarrollo</div>
-    </div>
-    <div class="stat-item reveal">
-      <div class="stat-num">10+</div>
-      <div class="stat-label">Tecnologías</div>
-    </div>
-    <div class="stat-item reveal">
-      <div class="stat-num">2</div>
-      <div class="stat-label">Idiomas</div>
-    </div>
-  </div>
-
-  <!-- SKILLS -->
-  <section id="skills" class="skills-bg">
-    <div class="section-header reveal">
-      <div class="section-num">01 · Stack técnico</div>
-      <h2 class="section-title">Con qué<br>trabajo.</h2>
-    </div>
-    <div class="skills-grid reveal">
-      <div class="skill-card">
-        <div class="skill-icon">⚡</div>
-        <div class="skill-title">Frontend</div>
-        <div class="skill-tags">
-          <span class="tag">Angular</span>
-          <span class="tag">TypeScript</span>
-          <span class="tag">JavaScript</span>
-          <span class="tag">HTML5</span>
-          <span class="tag">CSS3</span>
-        </div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-icon">🖥️</div>
-        <div class="skill-title">Backend</div>
-        <div class="skill-tags">
-          <span class="tag">PHP</span>
-          <span class="tag">Node.js</span>
-          <span class="tag">REST APIs</span>
-          <span class="tag">C#</span>
-          <span class="tag">ASP.NET Core</span>
-          <span class="tag">Entity Framework Core</span>
-          <span class="tag">Express.js</span>
-          <span class="tag">JWT</span>
-          <span class="tag">OpenAPI</span>
-        </div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-icon">🗄️</div>
-        <div class="skill-title">Bases de datos</div>
-        <div class="skill-tags">
-          <span class="tag">MySQL</span>
-          <span class="tag">MongoDB</span>
-          <span class="tag">SQL Server</span>
-          <span class="tag">SQL</span>
-          <span class="tag">noSQL</span>
-        </div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-icon">🔧</div>
-        <div class="skill-title">Metodologías</div>
-        <div class="skill-tags">
-          <span class="tag">SCRUM</span>
-          <span class="tag">Jira</span>
-          <span class="tag">UML</span>
-          <span class="tag">Git</span>
-          <span class="tag">Swagger / OpenAPI</span>
-        </div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-icon">🎮</div>
-        <div class="skill-title">Game Dev</div>
-        <div class="skill-tags">
-          <span class="tag">Unity</span>
-          <span class="tag">C#</span>
-          <span class="tag">Diseño de niveles</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROJECTS -->
-  <section id="projects">
-    <div class="section-header reveal">
-      <div class="section-num">02 · Proyectos</div>
-      <h2 class="section-title">Lo que<br>he construido.</h2>
-    </div>
-    <div class="projects-grid">
-      <a href="https://github.com/Marquitoslopez/trabajo-grupal-itba" target="_blank" rel="noopener noreferrer" class="project-card reveal">
-        <div class="project-thumb p-todo"><div class="project-thumb-label">HJ</div></div>
-        <div class="project-body">
-          <div class="project-meta"><span class="project-type">Backend · E-Commerce · En desarrollo</span></div>
-          <h3 class="project-title">Hermanos Jota — E-Commerce</h3>
-          <p class="project-desc">Desarrollo de backend y APIs REST para una plataforma de comercio electrónico. Integración con MongoDB y gestión de información de productos en un proyecto grupal bajo metodología Scrum.</p>
-          <div class="project-stack"><span>Node.js</span><span>Express</span><span>JavaScript</span><span>MongoDB</span><span>REST API</span><span>Scrum</span></div>
-        </div>
-      </a>
-
-      <div class="project-card reveal">
-        <a href="https://github.com/NehuenPey/gestion-inmobiliaria" target="_blank" rel="noopener noreferrer" class="project-card reveal"></a>
-        <div class="project-thumb p-peluqueria"><div class="project-thumb-label">GIA</div></div>
-        <div class="project-body">
-          <div class="project-meta"><span class="project-type">Backend · API REST · En desarrollo</span></div>
-          <h3 class="project-title">GestionInmobiliariaAPI</h3>
-          <p class="project-desc">API REST para la gestión de propiedades inmobiliarias. Implementación de operaciones CRUD, validaciones, persistencia de datos con Entity Framework Core y autenticación mediante JWT.</p>
-          <div class="project-stack"><span>C#</span><span>ASP.NET Core</span><span>EF Core</span><span>SQL Server</span><span>JWT</span><span>OpenAPI</span></div>
+        <div class="hero-links" aria-label="Perfiles profesionales">
+          <a href="https://github.com/NehuenPey" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+          <a href="https://www.linkedin.com/in/nehuenpeyrano/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+          <a href="mailto:nehuenpeyrano@gmail.com">Email ↗</a>
         </div>
       </div>
 
-      <a href="https://github.com/NehuenPey/interbus-web-redesign" target="_blank" rel="noopener noreferrer" class="project-card reveal">
-        <div class="project-thumb p-alice"><div class="project-thumb-label">INTERBUS</div></div>
-        <div class="project-body">
-          <div class="project-meta"><span class="project-type">Frontend · Rediseño web</span></div>
-          <h3 class="project-title">Interbus — Rediseño Web</h3>
-          <p class="project-desc">Rediseño y desarrollo del sitio web de una empresa de transporte. Implementación de navegación, horarios, tarifas y recorridos, con adaptación responsive y mejoras en la experiencia de usuario.</p>
-          <div class="project-stack"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Responsive Design</span></div>
-        </div>
-      </a>
-
-
-      <a href="https://github.com/NehuenPey/To-Do-List" target="_blank" rel="noopener noreferrer"
-        class="project-card reveal">
-
-        <div class="project-thumb p-todo">
-          <div class="project-thumb-label">TO-DO</div>
-        </div>
-
-        <div class="project-body">
-          <div class="project-meta">
-            <span class="project-type">Mobile · Gestión de tareas</span>
+      <div class="hero-visual" aria-label="Resumen del perfil técnico">
+        <div class="code-window">
+          <div class="window-bar">
+            <div class="window-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+            <span>profile.config</span>
+            <span class="window-language">JSON</span>
           </div>
-
-          <h3 class="project-title">Aplicación To-Do List</h3>
-
-          <p class="project-desc">
-            Aplicación móvil para gestión de tareas. Interfaz limpia, experiencia centrada en el usuario y arquitectura
-            de componentes con Angular.
-          </p>
-
-          <div class="project-stack">
-            <span>Angular</span>
-            <span>TypeScript</span>
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>JavaScript</span>
+          <div class="code-content">
+            <p><span class="code-muted">{</span></p>
+            <p class="indent"><span class="code-key">"role"</span>: <span class="code-value">"Full Stack Developer"</span>,</p>
+            <p class="indent"><span class="code-key">"backend"</span>: <span class="code-value">["C#", "ASP.NET Core", "Node.js"]</span>,</p>
+            <p class="indent"><span class="code-key">"frontend"</span>: <span class="code-value">["JavaScript", "TypeScript", "Angular"]</span>,</p>
+            <p class="indent"><span class="code-key">"databases"</span>: <span class="code-value">["SQL Server", "MySQL", "MongoDB"]</span>,</p>
+            <p class="indent"><span class="code-key">"focus"</span>: <span class="code-value">"APIs REST & web applications"</span></p>
+            <p><span class="code-muted">}</span></p>
+            <div class="code-divider"></div>
+            <p><span class="code-muted">// Actualmente trabajando en</span></p>
+            <p><span class="code-accent">GestionInmobiliariaAPI</span></p>
+            <p><span class="code-accent">Hermanos Jota E-Commerce</span></p>
           </div>
+          <div class="window-footer"><span class="footer-indicator"></span> Construyendo soluciones, aprendiendo continuamente.</div>
         </div>
-
-      </a>
-
-      <a href="https://github.com/NehuenPey/ProyectoPeluqueria" target="_blank" rel="noopener noreferrer"
-        class="project-card reveal">
-
-        <div class="project-thumb p-peluqueria">
-          <div class="project-thumb-label">SPC</div>
-        </div>
-
-        <div class="project-body">
-          <div class="project-meta">
-            <span class="project-type">Full Stack · Sistema de gestión</span>
-          </div>
-
-          <h3 class="project-title">Sistema Peluquería Canina</h3>
-
-          <p class="project-desc">
-            Sistema de gestión de clientes y registro de turnos para una peluquería canina. CRUD completo con base de
-            datos relacional.
-          </p>
-
-          <div class="project-stack">
-            <span>PHP</span>
-            <span>MySQL</span>
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>JavaScript</span>
-            <span>SQL</span>
-          </div>
-        </div>
-
-      </a>
-
-      <a href="https://github.com/ChiaraB96/Alice" target="_blank" rel="noopener noreferrer"
-        class="project-card reveal">
-
-        <div class="project-thumb p-alice">
-          <div class="project-thumb-label">ALICE</div>
-        </div>
-
-        <div class="project-body">
-          <div class="project-meta">
-            <span class="project-type">Game Dev · Primera persona</span>
-          </div>
-
-          <h3 class="project-title">Juego "Alice"</h3>
-
-          <p class="project-desc">
-            Videojuego en primera persona con mecánicas de movimiento, interacción con el entorno y diseño de niveles
-            completo.
-          </p>
-
-          <div class="project-stack">
-            <span>C#</span>
-            <span>Unity</span>
-          </div>
-        </div>
-
-      </a>
-
-      <a href="https://github.com/NehuenPey/HiceMagia" target="_blank" rel="noopener noreferrer"
-        class="project-card reveal">
-
-        <div class="project-thumb p-brujeria">
-          <div class="project-thumb-label">P&C</div>
-        </div>
-
-        <div class="project-body">
-          <div class="project-meta">
-            <span class="project-type">Game Dev · Point & Click</span>
-          </div>
-
-          <h3 class="project-title">Juego "Hice Brujería"</h3>
-
-          <p class="project-desc">
-            Juego point and click con mecánicas de combinación de posiciones y sistema de puntuación máxima.
-          </p>
-
-          <div class="project-stack">
-            <span>C#</span>
-            <span>Unity</span>
-          </div>
-        </div>
-      </a>
-      <a href="https://github.com/NehuenPey/Memorin---Haskell" target="_blank" rel="noopener noreferrer"
-        class="project-card reveal">
-
-        <div class="project-thumb p-haskell">
-          <div class="project-thumb-label">λ</div>
-        </div>
-
-        <div class="project-body">
-          <div class="project-meta">
-            <span class="project-type">Programación Funcional · Lógica</span>
-          </div>
-
-          <h3 class="project-title">Juego "Memorín" (Haskell)</h3>
-
-          <p class="project-desc">
-            Juego de memoria desarrollado en Haskell aplicando programación funcional, manejo de listas y lógica pura
-            sin estado mutable.
-          </p>
-
-          <div class="project-stack">
-            <span>Haskell</span>
-            <span>Programación Funcional</span>
-            <span>Lógica</span>
-          </div>
-        </div>
-
-      </a>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section id="about" class="skills-bg">
-    <div class="section-header reveal">
-      <div class="section-num">03 · Sobre mí</div>
-      <h2 class="section-title">Perfil y<br>experiencia.</h2>
-    </div>
-    <div class="about-grid">
-      <div class="about-card reveal">
-        <div class="about-card-top">
-          <div class="about-avatar">👨‍💻</div>
-          <div class="about-card-name">Nehuén Peyrano</div>
-          <div class="about-card-role">Desarrollador de Software</div>
-        </div>
-        <div class="about-card-body">
-          <a href="https://www.linkedin.com/in/nehuenpeyrano/" target="_blank" class="about-card-item"
-            rel="noopener noreferrer">
-            <span class="about-card-icon">in</span> LinkedIn
-          </a>
-          <a href="https://github.com/NehuenPey" target="_blank" class="about-card-item" rel="noopener noreferrer">
-            <span class="about-card-icon">GH</span> GitHub
-          </a>
-        </div>
+        <div class="visual-orbit orbit-one" aria-hidden="true"></div>
+        <div class="visual-orbit orbit-two" aria-hidden="true"></div>
       </div>
+    </section>
 
-      <div class="about-text-section">
-        <p>Soy desarrollador de software con enfoque en aplicaciones web full stack. He trabajado en proyectos de frontend con HTML, CSS, JavaScript y Angular, y en backend con Node.js, Express y C# con ASP.NET Core. También desarrollo e integro APIs REST y bases de datos SQL y NoSQL.</p>
-        <p>Actualmente participo en proyectos de comercio electrónico y desarrollo de APIs para gestión inmobiliaria. Además, cuento con experiencia académica en desarrollo de videojuegos con Unity y C#.</p>
-        <p>Busco integrarme a equipos donde pueda aportar soluciones prácticas y seguir desarrollándome en entornos
-          profesionales.</p>
+    <section class="quick-facts" aria-label="Áreas de trabajo">
+      <div class="container facts-grid">
+        <div><span class="fact-index">01</span><span>Aplicaciones web</span></div>
+        <div><span class="fact-index">02</span><span>APIs REST</span></div>
+        <div><span class="fact-index">03</span><span>Bases de datos</span></div>
+        <div><span class="fact-index">04</span><span>Trabajo colaborativo</span></div>
+      </div>
+    </section>
 
-        <div style="margin-top:2rem">
-          <div class="section-num" style="margin-bottom:1.5rem">Educación</div>
-          <div class="edu-timeline">
-            <div class="edu-item">
-              <div class="edu-year">2021–2023</div>
-              <div class="edu-body">
-                <div class="edu-title">Desarrollo de Software</div>
-                <div class="edu-sub">Instituto Gral. Manuel Belgrano</div>
-              </div>
+    <section class="section container" id="skills">
+      <div class="section-heading">
+        <p class="section-kicker">01 / Stack técnico</p>
+        <h2>Herramientas para<br><span class="accent">construir soluciones.</span></h2>
+        <p class="section-intro">Tecnologías y herramientas que utilizo en proyectos académicos y personales.</p>
+      </div>
+      <div class="skills-grid">
+        <article class="skill-card">
+          <span class="skill-number">01</span>
+          <h3>Backend</h3>
+          <p>Desarrollo de servicios, lógica de negocio e integración de APIs.</p>
+          <div class="tag-list"><span>C#</span><span>ASP.NET Core</span><span>Node.js</span><span>Express.js</span><span>PHP</span><span>Entity Framework Core</span><span>JWT</span><span>Swagger / OpenAPI</span></div>
+        </article>
+        <article class="skill-card">
+          <span class="skill-number">02</span>
+          <h3>Frontend</h3>
+          <p>Interfaces web, componentes y experiencias responsive.</p>
+          <div class="tag-list"><span>JavaScript</span><span>TypeScript</span><span>Angular</span><span>HTML5</span><span>CSS3</span><span>React</span></div>
+        </article>
+        <article class="skill-card">
+          <span class="skill-number">03</span>
+          <h3>Bases de datos</h3>
+          <p>Modelado, consultas y persistencia de información.</p>
+          <div class="tag-list"><span>SQL</span><span>SQL Server</span><span>MySQL</span><span>MongoDB</span><span>Mongoose</span></div>
+        </article>
+        <article class="skill-card">
+          <span class="skill-number">04</span>
+          <h3>Herramientas y prácticas</h3>
+          <p>Control de versiones, documentación y organización del trabajo.</p>
+          <div class="tag-list"><span>Git</span><span>GitHub</span><span>Jira</span><span>Scrum</span><span>REST</span><span>UML</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">02 / Proyectos seleccionados</p>
+          <h2>Trabajo aplicado,<br><span class="accent">más allá de la teoría.</span></h2>
+          <p class="section-intro">Una selección de desarrollos en los que trabajé con distintas tecnologías, responsabilidades y desafíos.</p>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card project-featured">
+            <div class="project-visual visual-ecommerce"><span class="visual-mark">HJ<span>.</span></span><span class="visual-caption">E-COMMERCE / FULL STACK</span></div>
+            <div class="project-content">
+              <div class="project-meta"><span>Proyecto grupal</span><span class="project-status">En desarrollo</span></div>
+              <h3>Hermanos Jota — E-Commerce</h3>
+              <p>Plataforma de comercio electrónico para muebles artesanales. Participación en el desarrollo del backend, APIs REST, gestión de productos e integración con MongoDB dentro de un equipo de trabajo con metodología Scrum.</p>
+              <div class="tag-list"><span>Node.js</span><span>Express</span><span>JavaScript</span><span>MongoDB</span><span>REST API</span><span>React</span></div>
+              <a class="project-link" href="https://github.com/Marquitoslopez/trabajo-grupal-itba" target="_blank" rel="noopener noreferrer">Ver repositorio <span aria-hidden="true">↗</span></a>
             </div>
-            <div class="edu-item">
-              <div class="edu-year">2014–2018</div>
-              <div class="edu-body">
-                <div class="edu-title">Bachiller en Economía y Administración</div>
-                <div class="edu-sub">N.R.E.S Orientada Nro°2270</div>
-              </div>
+          </article>
+
+          <article class="project-card project-featured">
+            <div class="project-visual visual-realestate"><span class="visual-mark">GIA<span>.</span></span><span class="visual-caption">REAL ESTATE / REST API</span></div>
+            <div class="project-content">
+              <div class="project-meta"><span>Proyecto personal</span><span class="project-status">En desarrollo</span></div>
+              <h3>GestionInmobiliariaAPI</h3>
+              <p>API REST para administrar propiedades inmobiliarias. Incluye operaciones CRUD, validaciones, persistencia con Entity Framework Core y autenticación basada en JWT.</p>
+              <div class="tag-list"><span>C#</span><span>ASP.NET Core</span><span>EF Core</span><span>SQL Server</span><span>JWT</span><span>OpenAPI</span></div>
+              <a class="project-link" href="https://github.com/NehuenPey/gestion-inmobiliaria" target="_blank" rel="noopener noreferrer">Ver repositorio <span aria-hidden="true">↗</span></a>
             </div>
-          </div>
-        </div>
-        <div style="margin-top:2rem">
-          <div class="section-num" style="margin-bottom:1rem">Idiomas</div>
-          <div class="soft-skills">
-            <span class="soft-tag">Español — Nativo</span>
-            <span class="soft-tag">Inglés — Intermedio (B1–B2)</span>
-            <span class="soft-tag">Portugues — Basico-Intermedio (A2-B1)</span>
-          </div>
+          </article>
+
+          <article class="project-card project-featured">
+            <div class="project-visual visual-interbus"><span class="visual-mark">INTER<span>BUS</span></span><span class="visual-caption">WEB REDESIGN / RESPONSIVE</span></div>
+            <div class="project-content">
+              <div class="project-meta"><span>Proyecto web</span><span class="project-status">Implementado</span></div>
+              <h3>Interbus — Rediseño Web</h3>
+              <p>Rediseño responsive de un sitio de transporte, con secciones de horarios, tarifas, recorridos y navegación orientada a facilitar el acceso a la información.</p>
+              <div class="tag-list"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Responsive Design</span></div>
+              <a class="project-link" href="https://github.com/NehuenPey/interbus-web-redesign" target="_blank" rel="noopener noreferrer">Ver repositorio <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
         </div>
 
-        <div style="margin-top:2rem">
-          <div class="section-num" style="margin-bottom:1rem">Habilidades blandas</div>
-          <div class="soft-skills">
-            <span class="soft-tag">Compromiso</span>
-            <span class="soft-tag">Aprendizaje continuo</span>
-            <span class="soft-tag">Adaptabilidad</span>
-            <span class="soft-tag">Trabajo en equipo</span>
-            <span class="soft-tag">Capacidad de escucha</span>
+        <div class="secondary-projects">
+          <div class="secondary-heading"><h3>Otros proyectos</h3><span>Desarrollos académicos y personales</span></div>
+          <div class="secondary-grid">
+            <article class="secondary-card">
+              <div><span class="secondary-type">Aplicación móvil</span><h4>To-Do List</h4><p>Gestión de tareas con categorías, notificaciones e interacción mediante componentes.</p><div class="tag-list"><span>Angular</span><span>Ionic</span><span>TypeScript</span></div></div>
+              <a href="https://github.com/NehuenPey/To-Do-List" target="_blank" rel="noopener noreferrer" aria-label="Ver repositorio de To-Do List">↗</a>
+            </article>
+            <article class="secondary-card">
+              <div><span class="secondary-type">Sistema de gestión</span><h4>Peluquería Canina</h4><p>CRUD de clientes y mascotas con persistencia en una base de datos relacional.</p><div class="tag-list"><span>PHP</span><span>MySQL</span><span>JavaScript</span></div></div>
+              <a href="https://github.com/NehuenPey/ProyectoPeluqueria" target="_blank" rel="noopener noreferrer" aria-label="Ver repositorio de Peluquería Canina">↗</a>
+            </article>
+            <article class="secondary-card">
+              <div><span class="secondary-type">Programación funcional</span><h4>Memorín</h4><p>Juego de memoria desarrollado aplicando lógica y conceptos de programación funcional.</p><div class="tag-list"><span>Haskell</span></div></div>
+              <a href="https://github.com/NehuenPey/Memorin---Haskell" target="_blank" rel="noopener noreferrer" aria-label="Ver repositorio de Memorín">↗</a>
+            </article>
+            <article class="secondary-card">
+              <div><span class="secondary-type">Desarrollo de videojuegos</span><h4>Proyectos Unity</h4><p>Experiencias académicas de videojuegos con mecánicas de interacción y diseño de niveles.</p><div class="tag-list"><span>C#</span><span>Unity</span></div></div>
+              <a href="https://github.com/NehuenPey/HiceMagia" target="_blank" rel="noopener noreferrer" aria-label="Ver repositorio de Hice Brujería">↗</a>
+            </article>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CONTACT -->
-  <section id="contact" class="contact-bg">
-    <div class="contact-container">
-
-      <!-- IZQUIERDA -->
-      <div class="contact-left">
-        <div class="section-num">04 · CONTACTO</div>
-        <h2 class="contact-title">¿Trabajamos juntos?</h2>
-
-        <p class="contact-text">
-          Estoy disponible para integrarme a equipos de desarrollo o colaborar en proyectos web.
-          Si creés que puedo aportar valor técnico a tu equipo, podemos conversar.
-        </p>
-
-        <div class="contact-links">
-          <a href="mailto:nehuenpeyrano@gmail.com" class="contact-item">✉ Email</a>
-          <a href="https://linkedin.com/in/nehuenpeyrano/" target="_blank" class="contact-item">in LinkedIn</a>
-          <a href="https://github.com/NehuenPey" target="_blank" class="contact-item">GH GitHub</a>
+    <section class="section container" id="about">
+      <div class="section-heading">
+        <p class="section-kicker">03 / Perfil</p>
+        <h2>Formación técnica,<br><span class="accent">aprendizaje constante.</span></h2>
+      </div>
+      <div class="about-layout">
+        <div class="about-summary">
+          <p class="about-lead">Soy Técnico Superior en Desarrollo de Software y me enfoco en crear aplicaciones web, servicios backend y soluciones conectadas a bases de datos.</p>
+          <p>En mis proyectos trabajé con distintos lenguajes y frameworks, desde el desarrollo de interfaces hasta la implementación de APIs, autenticación y persistencia. Me interesa escribir código claro, entender el problema antes de resolverlo y construir funcionalidades que puedan mantenerse y evolucionar.</p>
+          <p>Actualmente continúo ampliando mi experiencia práctica mediante proyectos personales y colaborativos, con especial interés en backend y desarrollo full stack.</p>
+          <div class="soft-skills"><span>Resolución de problemas</span><span>Aprendizaje continuo</span><span>Trabajo en equipo</span><span>Responsabilidad</span></div>
+        </div>
+        <div class="about-details">
+          <div class="detail-block">
+            <p class="detail-label">Formación</p>
+            <div class="timeline-item"><span class="timeline-date">Finalizado · 2023</span><div><h3>Técnico Superior en Desarrollo de Software</h3><p>Instituto Gral. Manuel Belgrano</p></div></div>
+            <div class="timeline-item"><span class="timeline-date">En curso</span><div><h3>Licenciatura en Corretaje Inmobiliario</h3><p>Facultad de Derecho · Universidad Nacional de Rosario</p></div></div>
+          </div>
+          <div class="detail-block">
+            <p class="detail-label">Idiomas</p>
+            <div class="language-row"><span>Español</span><span>Nativo</span></div>
+            <div class="language-row"><span>Inglés</span><span>B1–B2 · Intermedio</span></div>
+            <div class="language-row"><span>Portugués</span><span>A2–B1 · Básico–intermedio</span></div>
+          </div>
         </div>
       </div>
+    </section>
 
-      <!-- DERECHA -->
-      <div class="contact-card">
-        <h3 class="contact-card-title">Perfil Profesional</h3>
-
-        <ul class="contact-card-list">
-          <li>📍 Rosario, Argentina</li>
-          <li>💼 Disponible full-time / remoto</li>
-          <li>🚀 Respuesta en menos de 24hs</li>
-        </ul>
-        <a href="/Assets/pdf/PeyranoNehuén_CV.pdf" class="contact-card-btn" download>
-          Descargar CV
-        </a>
+    <section class="contact-section" id="contact">
+      <div class="container contact-layout">
+        <div>
+          <p class="section-kicker">04 / Contacto</p>
+          <h2>¿Tenés un proyecto<br>o una oportunidad?</h2>
+          <p class="contact-description">Estoy abierto a conversar sobre oportunidades profesionales, proyectos de desarrollo y colaboraciones.</p>
+          <a class="button button-primary" href="mailto:nehuenpeyrano@gmail.com?subject=Contacto%20desde%20tu%20portfolio">Escribirme por email <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="contact-panel">
+          <a href="mailto:nehuenpeyrano@gmail.com"><span>Email</span><strong>nehuenpeyrano@gmail.com</strong><span aria-hidden="true">↗</span></a>
+          <a href="https://www.linkedin.com/in/nehuenpeyrano/" target="_blank" rel="noopener noreferrer"><span>LinkedIn</span><strong>Perfil profesional</strong><span aria-hidden="true">↗</span></a>
+          <a href="https://github.com/NehuenPey" target="_blank" rel="noopener noreferrer"><span>GitHub</span><strong>Repositorios y proyectos</strong><span aria-hidden="true">↗</span></a>
+          <div class="cv-panel"><div><span class="detail-label">Currículum</span><p>Consultá o descargá mi CV actualizado.</p></div><a href="Assets/pdf/PeyranoNehuén_CV.pdf" target="_blank" rel="noopener noreferrer" aria-label="Abrir currículum en una nueva pestaña">Abrir CV ↗</a></div>
+        </div>
       </div>
-    </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <footer>
-    <span>© 2026 Nehuén Peyrano · Desarrollador de Software</span>
-    <span style="color:var(--accent)">Disponible para trabajar ●</span>
+  <footer class="site-footer">
+    <div class="container footer-inner"><a class="brand" href="#home"><span>NP</span>_DEV</a><p>© <span id="currentYear">2026</span> Nehuén Peyrano · Desarrollador de Software</p><a href="#home">Volver arriba ↑</a></div>
   </footer>
-
-  <script src="Assets/js/main.js"></script>
+  <script src="Assets/js/main.js" defer></script>
 </body>
-
 </html>
