@@ -103,12 +103,18 @@ function setLanguage(language) {
 
   document.querySelectorAll("body *").forEach((element) => {
     if (element.children.length !== 0) return;
-    const original = element.textContent;
+    if (!element.hasAttribute("data-i18n-original")) {
+      element.setAttribute("data-i18n-original", element.textContent);
+    }
+    const original = element.getAttribute("data-i18n-original") || "";
     const normalized = original.trim().replace(/\\s+/g, " ");
-    if (!normalized || !Object.prototype.hasOwnProperty.call(dictionary, normalized)) return;
+    if (!normalized) return;
+    const translated = Object.prototype.hasOwnProperty.call(dictionary, normalized)
+      ? dictionary[normalized]
+      : normalized;
     const leading = original.match(/^\\s*/)?.[0] || "";
     const trailing = original.match(/\\s*$/)?.[0] || "";
-    element.textContent = leading + dictionary[normalized] + trailing;
+    element.textContent = leading + translated + trailing;
   });
 
   const meta = languageMeta[selected];
@@ -118,6 +124,13 @@ function setLanguage(language) {
   const ogDescription = document.getElementById("ogDescription");
   if (description) description.content = meta.description;
   if (ogDescription) ogDescription.content = meta.ogDescription;
+
+  const navToggleButton = document.getElementById("navToggle");
+  if (navToggleButton) navToggleButton.setAttribute("aria-label", selected === "en"
+    ? (navToggleButton.getAttribute("aria-expanded") === "true" ? "Close menu" : "Open menu")
+    : selected === "pt"
+      ? (navToggleButton.getAttribute("aria-expanded") === "true" ? "Fechar menu" : "Abrir menu")
+      : (navToggleButton.getAttribute("aria-expanded") === "true" ? "Cerrar menú" : "Abrir menú"));
 
   languageButtons.forEach((button) => {
     const active = button.dataset.language === selected;
