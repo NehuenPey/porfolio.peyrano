@@ -93,10 +93,21 @@
   "seo.title": "Nehuén Peyrano | Software Developer",
   "seo.description": "Nehuén Peyrano's portfolio. Software developer focused on web applications, REST APIs, and full stack solutions with C#, ASP.NET Core, Node.js, and Angular.",
   "seo.ogDescription": "Projects, technology stack, and professional profile of Nehuén Peyrano.",
-  "portfolio.currentlyWorking": "// Currently working on",
   "skills.headingPrefix": "Development",
   "skills.headingAccent": "tools.",
   "skills.intro": "Technologies and tools I use in projects.",
   "projects.heading": "Current projects.",
-  "about.heading": "Technical background."
+  "about.heading": "Technical background.",
+  "content.espanol": "Spanish",
+  "a11y.brand-home": "Nehuén Peyrano, home",
+  "a11y.language-switch": "Select language",
+  "a11y.profile-summary": "Technical profile summary",
+  "a11y.work-areas": "Areas of work",
+  "a11y.repository-todo": "View To-Do List repository",
+  "a11y.repository-dog-grooming": "View dog grooming system repository",
+  "a11y.repository-memory-game": "View Memorín repository",
+  "a11y.repository-unity": "View Unity projects repository",
+  "a11y.download-cv": "Download résumé",
+  "seo.ogTitle": "Nehuén Peyrano | Software Developer",
+  "seo.locale": "en_US"
 }
