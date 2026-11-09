@@ -10,8 +10,8 @@
   <meta name="author" content="Nehuén Peyrano">
   <meta name="theme-color" content="#171717">
   <meta property="og:type" content="website">
-  <meta property="og:locale" content="es_AR">
-  <meta property="og:title" content="Nehuén Peyrano | Desarrollador de Software">
+  <meta property="og:locale" content="es_AR" data-i18n-meta="seo.locale">
+  <meta property="og:title" content="Nehuén Peyrano | Desarrollador de Software" data-i18n-meta="seo.ogTitle">
   <meta property="og:description" content="Proyectos, stack tecnológico y perfil profesional de Nehuén Peyrano."
     id="ogDescription" data-i18n-meta="seo.ogDescription">
   <meta property="og:url" content="https://nehuenpeyranodev.vercel.app/">
@@ -32,7 +32,7 @@
 
   <header class="site-header">
     <nav class="nav container" aria-label="Navegación principal" data-i18n-attr="aria-label:a11y.main-navigation">
-      <a class="brand" href="#home" aria-label="Nehuén Peyrano, inicio"><span>NP</span>_DEV</a>
+      <a class="brand" href="#home" aria-label="Nehuén Peyrano, inicio" data-i18n-attr="aria-label:a11y.brand-home"><span>NP</span>_DEV</a>
       <button class="nav-toggle" id="navToggle" type="button" aria-label="Abrir menú"
         data-i18n-attr="aria-label:a11y.open-menu" aria-expanded="false" aria-controls="navMenu">
         <span></span><span></span><span></span>
@@ -42,7 +42,7 @@
         <li><a href="#projects"><span data-i18n="content.proyectos">Proyectos</span></a></li>
         <li><a href="#about"><span data-i18n="content.sobre-mi">Sobre mí</span></a></li>
         <li><a href="#contact"><span data-i18n="content.contacto">Contacto</span></a></li>
-        <li class="language-switch" aria-label="Seleccionar idioma">
+        <li class="language-switch" aria-label="Seleccionar idioma" data-i18n-attr="aria-label:a11y.language-switch">
           <button type="button" class="language-button is-active" data-language="es" aria-pressed="true">ES</button>
           <button type="button" class="language-button" data-language="en" aria-pressed="false">EN</button>
           <button type="button" class="language-button" data-language="pt" aria-pressed="false">PT</button>
@@ -82,7 +82,7 @@
         </div>
       </div>
 
-      <div class="hero-visual" aria-label="Resumen del perfil técnico">
+      <div class="hero-visual" aria-label="Resumen del perfil técnico" data-i18n-attr="aria-label:a11y.profile-summary">
         <div class="code-window">
           <div class="window-bar">
             <div class="window-dots" aria-hidden="true"><i></i><i></i><i></i></div>
@@ -116,7 +116,7 @@
       </div>
     </section>
 
-    <section class="quick-facts" aria-label="Áreas de trabajo">
+    <section class="quick-facts" aria-label="Áreas de trabajo" data-i18n-attr="aria-label:a11y.work-areas">
       <div class="container facts-grid">
         <div><span class="fact-index">01</span><span><span data-i18n="content.aplicaciones-web">Aplicaciones
               web</span></span></div>
@@ -264,7 +264,7 @@
                 <div class="tag-list"><span>Angular</span><span>Ionic</span><span>TypeScript</span></div>
               </div>
               <a href="https://github.com/NehuenPey/To-Do-List" target="_blank" rel="noopener noreferrer"
-                aria-label="Ver repositorio de To-Do List">↗</a>
+                aria-label="Ver repositorio de To-Do List" data-i18n-attr="aria-label:a11y.repository-todo">↗</a>
             </article>
             <article class="secondary-card">
               <div><span class="secondary-type"><span data-i18n="content.sistema-de-gestion">Sistema de
@@ -275,7 +275,7 @@
                 <div class="tag-list"><span>PHP</span><span>MySQL</span><span>JavaScript</span></div>
               </div>
               <a href="https://github.com/NehuenPey/ProyectoPeluqueria" target="_blank" rel="noopener noreferrer"
-                aria-label="Ver repositorio de Peluquería Canina">↗</a>
+                aria-label="Ver repositorio de Peluquería Canina" data-i18n-attr="aria-label:a11y.repository-dog-grooming">↗</a>
             </article>
             <article class="secondary-card">
               <div><span class="secondary-type"><span data-i18n="content.programacion-funcional">Programación
@@ -286,7 +286,7 @@
                 <div class="tag-list"><span>Haskell</span></div>
               </div>
               <a href="https://github.com/NehuenPey/Memorin---Haskell" target="_blank" rel="noopener noreferrer"
-                aria-label="Ver repositorio de Memorín">↗</a>
+                aria-label="Ver repositorio de Memorín" data-i18n-attr="aria-label:a11y.repository-memory-game">↗</a>
             </article>
             <article class="secondary-card">
               <div><span class="secondary-type"><span data-i18n="content.desarrollo-de-videojuegos">Desarrollo de
@@ -297,7 +297,7 @@
                 <div class="tag-list"><span>C#</span><span>Unity</span></div>
               </div>
               <a href="https://github.com/NehuenPey/HiceMagia" target="_blank" rel="noopener noreferrer"
-                aria-label="Ver repositorio de Hice Brujería">↗</a>
+                aria-label="Ver repositorio de Hice Brujería" data-i18n-attr="aria-label:a11y.repository-unity">↗</a>
             </article>
           </div>
         </div>
@@ -349,12 +349,10 @@
           </div>
           <div class="detail-block">
             <p class="detail-label"><span data-i18n="content.idiomas">Idiomas</span></p>
-            <div class="language-row"><span>Español</span><span><span data-i18n="content.nativo">Nativo</span></span>
+            <div class="language-row"><span data-i18n="content.espanol">Español</span><span><span data-i18n="content.nativo">Nativo</span></span>
             </div>
-            <div class="language-row"><span><span data-i18n="content.ingles">Inglés</span></span><span>B1–B2 ·
-                Intermedio</span></div>
-            <div class="language-row"><span><span data-i18n="content.portugues">Portugués</span></span><span>A2–B1 ·
-                Básico–intermedio</span></div>
+            <div class="language-row"><span><span data-i18n="content.ingles">Inglés</span></span><span>B1–B2 · <span data-i18n="content.intermedio">Intermedio</span></span></div>
+            <div class="language-row"><span><span data-i18n="content.portugues">Portugués</span></span><span>A2–B1 · <span data-i18n="content.basico-intermedio">Básico–intermedio</span></span></div>
           </div>
         </div>
       </div>
@@ -388,7 +386,7 @@
               <p><span data-i18n="content.consulta-o-descarga-mi-cv-actualizado">Consultá o descargá mi CV
                   actualizado.</span></p>
             </div><a data-cv-link href="Assets/pdf/PeyranoNehuen_CV_ES.pdf.pdf" download="PeyranoNehuen_CV_ES.pdf"
-              aria-label="Descargar currículum">Abrir CV ↗</a>
+              aria-label="Descargar currículum" data-i18n-attr="aria-label:a11y.download-cv"><span data-i18n="content.abrir-cv">Abrir CV</span> ↗</a>
           </div>
         </div>
       </div>
@@ -397,8 +395,7 @@
 
   <footer class="site-footer">
     <div class="container footer-inner"><a class="brand" href="#home"><span>NP</span>_DEV</a>
-      <p>© <span id="currentYear">2026</span> Nehuén Peyrano · Desarrollador de Software</p><a href="#home">Volver
-        arriba ↑</a>
+      <p>© <span id="currentYear">2026</span> Nehuén Peyrano · <span data-i18n="content.desarrollador-de-software">Desarrollador de Software</span></p><a href="#home"><span data-i18n="content.volver">Volver arriba</span> ↑</a>
     </div>
   </footer>
   <script src="Assets/js/i18n.js" defer></script>
