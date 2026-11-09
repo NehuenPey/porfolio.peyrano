@@ -93,10 +93,21 @@
   "seo.title": "Nehuén Peyrano | Desenvolvedor de Software",
   "seo.description": "Portfólio de Nehuén Peyrano, desenvolvedor de software com foco em aplicações web, APIs REST e soluções full stack com C#, ASP.NET Core, Node.js e Angular.",
   "seo.ogDescription": "Projetos, tecnologias e perfil profissional de Nehuén Peyrano.",
-  "portfolio.currentlyWorking": "// Trabalhando atualmente em",
   "skills.headingPrefix": "Ferramentas de",
   "skills.headingAccent": "desenvolvimento.",
   "skills.intro": "Tecnologias e ferramentas que utilizo em projetos.",
   "projects.heading": "Projetos atuais.",
-  "about.heading": "Formação técnica."
+  "about.heading": "Formação técnica.",
+  "content.espanol": "Espanhol",
+  "a11y.brand-home": "Nehuén Peyrano, início",
+  "a11y.language-switch": "Selecionar idioma",
+  "a11y.profile-summary": "Resumo do perfil técnico",
+  "a11y.work-areas": "Áreas de atuação",
+  "a11y.repository-todo": "Ver repositório do To-Do List",
+  "a11y.repository-dog-grooming": "Ver repositório do sistema de banho e tosa",
+  "a11y.repository-memory-game": "Ver repositório do Memorín",
+  "a11y.repository-unity": "Ver repositório dos projetos Unity",
+  "a11y.download-cv": "Baixar currículo",
+  "seo.ogTitle": "Nehuén Peyrano | Desenvolvedor de Software",
+  "seo.locale": "pt_BR"
 }
