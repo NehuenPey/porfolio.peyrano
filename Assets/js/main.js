@@ -132,6 +132,16 @@ function setLanguage(language) {
       ? (navToggleButton.getAttribute("aria-expanded") === "true" ? "Fechar menu" : "Abrir menu")
       : (navToggleButton.getAttribute("aria-expanded") === "true" ? "Cerrar menú" : "Abrir menú"));
 
+  const cvFiles = {
+    es: "Assets/pdf/PeyranoNehuen_CV_ES.pdf.pdf",
+    en: "Assets/pdf/PeyranoNehuen_CV_EN.pdf.pdf",
+    pt: "Assets/pdf/PeyranoNehuen_CV_PT.pdf.pdf"
+  };
+  document.querySelectorAll("[data-cv-link]").forEach((link) => {
+    link.href = cvFiles[selected];
+    link.download = `PeyranoNehuen_CV_${selected.toUpperCase()}.pdf`;
+  });
+
   languageButtons.forEach((button) => {
     const active = button.dataset.language === selected;
     button.classList.toggle("is-active", active);
