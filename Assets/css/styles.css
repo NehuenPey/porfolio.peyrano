@@ -111,7 +111,7 @@ button:focus-visible {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 28px;
+  gap: clamp(18px, 2.5vw, 32px);
 }
 
 .brand {
@@ -129,9 +129,11 @@ button:focus-visible {
 }
 
 .nav-menu {
+  flex: 1;
   display: flex;
   align-items: center;
-  gap: clamp(20px, 3vw, 42px);
+  justify-content: flex-end;
+  gap: clamp(16px, 2.2vw, 30px);
   list-style: none;
 }
 
@@ -1005,6 +1007,9 @@ button:focus-visible {
     left: 0;
     right: 0;
     display: none;
+    max-height: calc(100svh - 68px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
     flex-direction: column;
     align-items: stretch;
     gap: 0;
@@ -1026,13 +1031,31 @@ button:focus-visible {
   .hero {
     min-height: auto;
     grid-template-columns: 1fr;
-    gap: 45px;
-    padding-top: 135px;
-    padding-bottom: 75px;
+    gap: 38px;
+    padding-top: 112px;
+    padding-bottom: 68px;
+  }
+
+  .eyebrow {
+    margin-bottom: 24px;
   }
 
   .hero h1 {
-    font-size: clamp(3.5rem, 13vw, 3rem);
+    font-size: clamp(3rem, 12vw, 4.5rem);
+  }
+
+  .hero-role {
+    font-size: clamp(.68rem, 2.8vw, .84rem);
+    line-height: 1.8;
+  }
+
+  .hero-description {
+    font-size: .78rem;
+    line-height: 1.9;
+  }
+
+  .hero-links a {
+    color: #918b84;
   }
 
   .hero-visual {
@@ -1041,13 +1064,13 @@ button:focus-visible {
   }
 
   .orbit-one {
-    width: 360px;
-    height: 360px;
+    width: min(90vw, 360px);
+    height: min(90vw, 360px);
   }
 
   .orbit-two {
-    width: 430px;
-    height: 430px;
+    width: min(108vw, 430px);
+    height: min(108vw, 430px);
   }
 
   .facts-grid {
@@ -1125,13 +1148,15 @@ button:focus-visible {
     width: calc(100% - 32px);
   }
 
-  .hero h1 {
-    font-size: 2.5rem;
-  }
-
   .hero-actions {
     align-items: stretch;
     flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero-links {
+    gap: 18px;
+    margin-top: 30px;
   }
 
   .button {
@@ -1139,8 +1164,13 @@ button:focus-visible {
   }
 
   .code-content {
-    padding: 22px 14px;
-    font-size: .58rem;
+    padding: 20px 12px;
+    font-size: clamp(.54rem, 2.5vw, .62rem);
+    line-height: 2.25;
+  }
+
+  .code-content .indent {
+    padding-left: 14px;
   }
 
   .project-content {
@@ -1178,5 +1208,91 @@ button:focus-visible {
     animation-duration: .01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: .01ms !important;
+  }
+}
+
+/* Language selector and navigation alignment */
+.language-switch {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  margin-left: clamp(8px, 1.5vw, 20px);
+  padding: 4px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--surface-soft);
+}
+
+.language-button {
+  min-width: 34px;
+  padding: 7px 6px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background: transparent;
+  color: var(--muted-dark);
+  font-family: var(--font-body);
+  font-size: .62rem;
+  letter-spacing: .04em;
+  cursor: pointer;
+  transition: color .2s ease, background .2s ease, border-color .2s ease;
+}
+
+.language-button:hover {
+  color: var(--text);
+}
+
+.language-button.is-active {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: #171717;
+}
+
+.language-button:focus-visible {
+  outline: 2px solid var(--accent-light);
+  outline-offset: 3px;
+}
+
+.nav-cta {
+  flex-shrink: 0;
+  padding: 10px 15px;
+  border-radius: 4px;
+}
+
+@media (max-width: 900px) and (min-width: 761px) {
+  .nav {
+    gap: 14px;
+  }
+
+  .nav-menu {
+    gap: 14px;
+  }
+
+  .nav-menu a,
+  .nav-cta {
+    font-size: .61rem;
+  }
+
+  .language-switch {
+    margin-left: 4px;
+  }
+}
+
+@media (max-width: 760px) {
+  .nav-menu {
+    flex: initial;
+    justify-content: flex-start;
+  }
+
+  .language-switch {
+    align-self: flex-start;
+    justify-content: flex-start;
+    margin: 12px 0 0;
+    padding: 5px;
+    border-top: 0;
+  }
+
+  .language-button {
+    min-width: 42px;
+    padding: 10px 8px;
   }
 }
