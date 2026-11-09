@@ -32,7 +32,10 @@ updateScrollProgress();
 function closeMenu() {
   if (!navToggle || !navMenu) return;
   navToggle.setAttribute("aria-expanded", "false");
-  navToggle.setAttribute("aria-label", window.portfolioI18n?.t("a11y.open-menu") || "Abrir menú");
+  navToggle.setAttribute(
+    "aria-label",
+    window.portfolioI18n?.t("a11y.open-menu") || "Abrir menú",
+  );
   navMenu.classList.remove("is-open");
 }
 
@@ -42,7 +45,9 @@ if (navToggle && navMenu) {
     navToggle.setAttribute("aria-expanded", String(!isExpanded));
     navToggle.setAttribute(
       "aria-label",
-      isExpanded ? (window.portfolioI18n?.t("a11y.open-menu") || "Abrir menú") : (window.portfolioI18n?.t("a11y.close-menu") || "Cerrar menú"),
+      isExpanded
+        ? window.portfolioI18n?.t("a11y.open-menu") || "Abrir menú"
+        : window.portfolioI18n?.t("a11y.close-menu") || "Cerrar menú",
     );
     navMenu.classList.toggle("is-open", !isExpanded);
   });
@@ -85,6 +90,5 @@ if ("IntersectionObserver" in window) {
     revealObserver.observe(item);
   });
 }
-
 
 // Internationalization is handled by the dedicated i18n module.
