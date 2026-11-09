@@ -169,7 +169,7 @@ button:focus-visible {
   grid-template-columns: 1.05fr .95fr;
   align-items: center;
   gap: clamp(48px, 7vw, 100px);
-  padding-top: 100px;
+  padding-top: 90px;
   padding-bottom: 90px;
 }
 
