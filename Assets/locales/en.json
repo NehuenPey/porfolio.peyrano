@@ -109,5 +109,6 @@
   "a11y.repository-unity": "View Unity projects repository",
   "a11y.download-cv": "Download résumé",
   "seo.ogTitle": "Nehuén Peyrano | Software Developer",
-  "seo.locale": "en_US"
+  "seo.locale": "en_US",
+  "content.papiro-description": "Papiro — Virtual Library for browsing the catalog, managing books and copies, and handling loans and reservations. Backend built with a REST API, Node.js, Express, PostgreSQL, and Prisma."
 }
