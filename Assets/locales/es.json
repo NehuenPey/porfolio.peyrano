@@ -109,5 +109,6 @@
   "a11y.repository-unity": "Ver repositorio de proyectos Unity",
   "a11y.download-cv": "Descargar currículum",
   "seo.ogTitle": "Nehuén Peyrano | Desarrollador de Software",
-  "seo.locale": "es_AR"
+  "seo.locale": "es_AR",
+  "content.papiro-description": "Papiro — Biblioteca Virtual para consultar el catálogo, administrar libros y ejemplares y gestionar préstamos y reservas. Backend con API REST, Node.js, Express, PostgreSQL y Prisma."
 }
